@@ -1,0 +1,2 @@
+/usr/bin/ar qc libFunctions.a CMakeFiles/Functions.dir/DataGenerator.cpp.o CMakeFiles/Functions.dir/Info.cpp.o
+/usr/bin/ranlib libFunctions.a

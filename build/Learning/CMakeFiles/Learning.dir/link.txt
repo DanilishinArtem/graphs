@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLearning.a CMakeFiles/Learning.dir/Learning.cpp.o
+/usr/bin/ranlib libLearning.a
