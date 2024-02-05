@@ -9,8 +9,8 @@ HiddenNode::HiddenNode(std::vector<Node*> inputs_arg, Activation act_arg){
     weights_inputs.resize(inputs.size());
     weights_gradients.resize(inputs.size());
     for(int i = 0; i < inputs.size(); i++) {
-        weights_inputs[i] = RandomGen::getVal();
-        weights_gradients[i] = RandomGen::getVal();
+        weights_inputs[i] = NormalGen::getVal();
+        weights_gradients[i] = 0;
     }
     current_value = 0;
     gradient = 0;

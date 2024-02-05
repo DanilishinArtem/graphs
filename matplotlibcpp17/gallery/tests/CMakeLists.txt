@@ -1,0 +1,2 @@
+add_subdirectory(test_shared_lib)
+add_subdirectory(test_static_lib)

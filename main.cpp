@@ -5,16 +5,19 @@
 #include "Functions/DataGenerator.h"
 #include "Functions/Info.h"
 #include "Learning/Learning.h"
+#include "Plotter/plot.h"
+
 
 int main() {
-    // std::vector<std::pair<int, Activation>> config = {{5, Activation::Sigmoid}, {10, Activation::Sigmoid}, {10, Activation::Sigmoid}, {10, Activation::Sigmoid}, {1, Activation::ReLU}};
-    std::vector<std::pair<int, Activation>> config = {{1, Activation::Lin}, {2, Activation::Sigmoid}, {1, Activation::ReLU}};
+    std::vector<std::pair<int, Activation>> config = {{1, Activation::Lin}, {20, Activation::ReLU}, {20, Activation::ReLU}, {1, Activation::ReLU}};
     NeuralNetwork nn(config);
-    int N = 500;
-    DataGen dg(0, 0.1, N);
-    showInfoPred(&nn, &dg);
-    // info.show();
-    LearningProcess lp(0.01, 10000);
+    int N = 100;
+    DataGen dg(N);
+    showInfoPred(&nn, &dg, 10);
+    LearningProcess lp(0.1, 1000);
     lp.run(&nn, &dg);
-    showInfoPred(&nn, &dg);    
+    showInfoPred(&nn, &dg, 10);   
+    Plotter plot;
+    std::vector<double> out = predict(&nn, &dg);
+    plot.plot(dg.x, dg.y, out, "/home/adanilishin/Graph");
 }

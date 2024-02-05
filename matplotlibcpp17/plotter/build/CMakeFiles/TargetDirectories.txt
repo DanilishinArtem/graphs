@@ -1,0 +1,3 @@
+/home/adanilishin/Graph/matplotlibcpp17/plotter/build/CMakeFiles/plot.dir
+/home/adanilishin/Graph/matplotlibcpp17/plotter/build/CMakeFiles/edit_cache.dir
+/home/adanilishin/Graph/matplotlibcpp17/plotter/build/CMakeFiles/rebuild_cache.dir

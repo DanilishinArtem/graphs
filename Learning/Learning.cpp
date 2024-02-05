@@ -24,6 +24,6 @@ void LearningProcess::run(NeuralNetwork* nn, DataGen* dg) {
             nn->step(learningRate);
             nn->zero_grad();
         }
-        cout << "value of loss for epoch " << i << ": " << total_loss / dg->x.size() << endl;
+        cout << "value of loss for epoch " << i << ": " << total_loss << endl;
     }
 }

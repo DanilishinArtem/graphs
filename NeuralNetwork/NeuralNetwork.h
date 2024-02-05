@@ -2,6 +2,7 @@
 #define NN_H
 #include <vector>
 #include "../Nodes/Nodes.h"
+using namespace std;
 
 class NeuralNetwork {
 public:

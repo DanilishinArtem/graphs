@@ -38,7 +38,7 @@ public:
 class BiasNode : public Node {
 public:
     BiasNode(){
-        current_value = RandomGen::getVal();
+        current_value = 0;
         gradient = 0;
         act = Activation::Lin;
     }

@@ -1,11 +1,11 @@
 #include "Info.h"
 
 
-void showInfoPred(NeuralNetwork* nn, DataGen* dg){
+void showInfoPred(NeuralNetwork* nn, DataGen* dg, int N){
     std::vector<double> data;
     data.resize(1);
     cout << "\n\nValues of x          Values of y          Values of network" << endl;
-    for(int i = 0; i < dg->y.size(); i++) {
+    for(int i = 0; i < N; i++) {
         data[0] = dg->x[i];
         cout << dg->x[i] << "                    " << dg->y[i] << "                    " << nn->forward(data) << endl;
     }
@@ -41,4 +41,15 @@ void show_grads(NeuralNetwork* nn) {
             cout << endl;
         }
     }
+}
+
+std::vector<double> predict(NeuralNetwork* nn, DataGen* dg){
+    std::vector<double> data;
+    std::vector<double> out;
+    data.resize(1);
+        for(int i = 0; i < dg->x.size(); i++) {
+        data[0] = dg->x[i];
+        out.push_back(nn->forward(data));
+    }
+    return out;
 }

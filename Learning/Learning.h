@@ -3,6 +3,7 @@
 #include <iostream>
 #include "../Functions/DataGenerator.h"
 #include "../NeuralNetwork/NeuralNetwork.h"
+using namespace std;
 // #include "../Functions/Derivatives.h"
 
 class LearningProcess{

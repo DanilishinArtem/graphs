@@ -5,9 +5,10 @@
 #include <stdexcept>
 using namespace std;
 
+// #define max(x, y) ((x) > (y) ? (x) : (y))
 class ActivationFunctions {
 public:
-    static double apply(Activation act, double x){
+    static double apply(Activation act, double x) {
         switch (act) {
             case Activation::ReLU:
                 return max(0.0, x);
