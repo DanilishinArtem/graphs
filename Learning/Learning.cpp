@@ -18,8 +18,8 @@ void LearningProcess::run(NeuralNetwork* nn, DataGen* dg) {
         for(int j = 0; j < dg->x.size(); j++) {
             data[0] = dg->x[j];
             prediction = nn->forward(data);
-            total_loss += loss_function(prediction, dg->y[j]);
-            nn->layers.back()[0]->gradient = loss_function_der(prediction, dg->y[j]) * DerivativeFunctions::apply(nn->layers.back()[0]->act, nn->layers.back()[0]->current_value);
+            total_loss += LearningProcess::loss_function(prediction, dg->y[j]);
+            nn->layers.back()[0]->gradient = LearningProcess::loss_function_der(prediction, dg->y[j]) * DerivativeFunctions::apply(nn->layers.back()[0]->act, nn->layers.back()[0]->current_value);
             nn->backward();
             nn->step(learningRate);
             nn->zero_grad();
