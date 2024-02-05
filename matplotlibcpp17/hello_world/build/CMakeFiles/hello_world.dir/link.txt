@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/hello_world.dir/hello_world.cpp.o -o hello_world  /usr/lib/x86_64-linux-gnu/libpython3.10.so /usr/lib/x86_64-linux-gnu/libpython3.10.so 

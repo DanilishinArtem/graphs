@@ -14,7 +14,7 @@ int main() {
     int N = 100;
     DataGen dg(N);
     showInfoPred(&nn, &dg, 10);
-    LearningProcess lp(0.1, 1000);
+    LearningProcess lp(0.1, 100);
     lp.run(&nn, &dg);
     showInfoPred(&nn, &dg, 10);   
     Plotter plot;
