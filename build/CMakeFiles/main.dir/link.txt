@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/main.dir/main.cpp.o -o main  Functions/libFunctions.a Learning/libLearning.a NeuralNetwork/libNeuralNetwork.a Nodes/libNodes.a /usr/lib/x86_64-linux-gnu/libpython3.10.so /home/adanilishin/Graph/Plotter/libplot.a /usr/lib/x86_64-linux-gnu/libpython3.10.so 
